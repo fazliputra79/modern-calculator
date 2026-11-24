@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #0b1426, #142d4e, #101827);
+}
+
+.calculator {
+    width: 100%;
+    max-width: 370px;
+    padding: 28px;
+    border-radius: 28px;
+    background: linear-gradient(145deg, #1c304b, #142238);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+}
+
+.header {
+    margin-bottom: 25px;
+}
+
+.header h2 {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    color: #91a8c5;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.display {
+    background: #0b1729;
+    padding: 22px;
+    border-radius: 18px;
+    text-align: right;
+    margin-bottom: 23px;
+    min-height: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid rgba(255,255,255,0.05);
+    overflow: hidden;
+}
+
+#history {
+    color: #8299b5;
+    font-size: 14px;
+    min-height: 22px;
+}
+
+#result {
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 62px;
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 16px;
+    background: #263b57;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+button:hover {
+    background: #385778;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+.operator {
+    background: #1769b0;
+    color: #ffffff;
+}
+
+.operator:hover {
+    background: #2688d5;
+}
+
+.equal {
+    grid-column: span 2;
+    background: linear-gradient(135deg, #10a982, #0b8f70);
+    color: white;
+}
+
+.equal:hover {
+    background: linear-gradient(135deg, #19c79b, #10a982);
+}
+
+.footer {
+    text-align: center;
+    color: #7188a5;
+    font-size: 11px;
+    margin-top: 25px;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 20px;
+    }
+
+    button {
+        height: 55px;
+    }
+
+    #result {
+        font-size: 32px;
+    }
+}
